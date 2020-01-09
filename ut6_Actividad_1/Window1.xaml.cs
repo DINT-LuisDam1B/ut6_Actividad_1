@@ -23,6 +23,11 @@ namespace ut6_Actividad_1
         {
             InitializeComponent();
             reportViewer.Owner = this;
+
+            CrystalReportInformeClientes informe = new CrystalReportInformeClientes();
+
+            informe.SetDatabaseLogon("tema6servidorluis","asdecu@dor77");
+            reportViewer.ViewerCore.ReportSource = informe;
         }
     }
 }
